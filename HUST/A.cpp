@@ -1,6 +1,8 @@
 /**
- * HUST ACM Contest
+ * HUST ACM Contest - Algorithm Practice 1
  * http://acm.hust.edu.cn/vjudge/contest/view.action?cid=80772#overview
+ *
+ * Elections
  *
  * Description
  * The next in turn elections are to come soon. All the fences are posted with

@@ -1,6 +1,8 @@
 /**
- * HUST ACM Contest
+ * HUST ACM Contest - Algorithm Practice 1
  * http://acm.hust.edu.cn/vjudge/contest/view.action?cid=80772#overview
+ *
+ * Isenbaev's Number
  *
  * Description
  * Vladislav Isenbaev is a two-time champion of Ural, vice champion of TopCoder
