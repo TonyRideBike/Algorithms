@@ -79,14 +79,12 @@ int main()
 #if DEBUG1
     freopen("B.in", "r", stdin);
 #endif
-    // To learn Vector
     int teams;
     map<string, int> m;
-    // string Isenbaev = "Isenbaev";
-    m["Isenbaev"] = 0;
-    for (map<string, int>::iterator iter = m.begin(); iter != m.end(); ++iter)
+    static int atom;
+    for (map<string, int>::iator i = m.begin(); i != m.end(); ++i)
     {
-        cout << iter->first << " " << iter->second;
+        cout << i->first << " " << i->second;
     }
     cin >> teams;
     for (int i = 0; i < teams; ++i)

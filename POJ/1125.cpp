@@ -1,12 +1,16 @@
-/*
-* http://poj.org/problem?id=1125
-*
-*/
+/**
+    POJ 1125 Stockbroker Grapevine
+    SW Cert. week 2
+    Floyd Algorithm
+
+    168k 0ms
+    */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 #define debug1 1
-#define debug2 1
+#define debug2 0
 
 #define MAX_NODES       101
 #define INF             0x7fff
@@ -19,14 +23,13 @@ int main(int argc, char *argv[]) {
     scanf("%d", &nodes);
     while (nodes) {
         // solve cases
-        //int map[MAX_NODES][MAX_NODES];
         int distance[MAX_NODES][MAX_NODES];
         for (int from = 1; from <= nodes; from++) {        // initialize tables
             for (int to = 1; to <= nodes; to++) {
-                //map[i][j] = INF;
                 if (from == to) {
                     distance[from][to] = 0;
-                } else {
+                }
+                else {
                     distance[from][to] = INF;
                 }
             }
@@ -43,7 +46,7 @@ int main(int argc, char *argv[]) {
         } // build the table
 
 #if debug2
-// check the table
+        // check the table
         for (int from = 1; from <= nodes; from++) {
             for (int to = 1; to <= nodes; to++) {
                 distance[from][to] == INF ? printf(" X ") : printf("%2d ", distance[from][to]);
@@ -52,7 +55,7 @@ int main(int argc, char *argv[]) {
         }
         printf("\n");
 #endif
-        // Floyd algorithm O(n^3)
+        // Floyd algorithm O(N^3)
         for (int trans = 1; trans <= nodes; trans++) {
             for (int from = 1; from <= nodes; from++) {
                 for (int to = 1; to <= nodes; to++) {
@@ -64,7 +67,7 @@ int main(int argc, char *argv[]) {
         }
 
 #if debug2
-// check the map
+        // check the map
         for (int from = 1; from <= nodes; from++) {
             for (int to = 1; to <= nodes; to++) {
                 distance[from][to] == INF ? printf(" X ") : printf("%2d ", distance[from][to]);

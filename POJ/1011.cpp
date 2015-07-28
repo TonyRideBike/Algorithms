@@ -1,8 +1,7 @@
-/***
- * POJ 1011
- * http://poj.org/problem?id=1011
- *
- */
+/*
+    POJ 1011 Sticks
+    
+    */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +9,6 @@
 #define MAX_STICKS 64
 
 #define DEBUG1 1
-#define DEBUG2 1
 
 struct node{
     int position;
@@ -33,12 +31,6 @@ int main(int argc, char *argv[]) {
             max_length = max_length > lengths[i] ? max_length : lengths[i];
             min_length = min_length < lengths[i] ? min_length : lengths[i];
         }
-#if DEBUG2
-        for (int i = 0; i < sticks; i++) {
-            printf("%2d ", lengths[i]);
-        }
-        printf("\n");
-#endif
         // TO-DO
         scanf("%d", &sticks);
     }
